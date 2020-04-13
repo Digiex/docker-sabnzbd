@@ -163,3 +163,11 @@ docker build \
   --pull \
   -t digiex/sabnzbd:latest .
 ```
+
+## Credits & Useful Links
+
+This project makes use of the following projects:
+- https://github.com/digiex/M4V-Converter
+- https://github.com/linuxserver/docker-sabnzbd
+
+Enjoy
