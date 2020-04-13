@@ -3,7 +3,7 @@
 [[ ! -e /config/sabnzbd.ini ]] && \
   cp /defaults/sabnzbd.ini /config/sabnzbd.ini
 
-[[ ! -e /config/M4V-Converter.conf ]] && \
+[[ ! -e /config/mp4.conf ]] && \
   cp /mp4/default.conf /config/mp4.conf
 
 [[ -f /config/sabnzbd.ini ]] && \
