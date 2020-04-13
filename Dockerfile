@@ -10,6 +10,6 @@ RUN \
   apt-get -y install ffmpeg && \
   apt-get clean
 
-COPY --from=base /mp4 /
 COPY root /
 COPY sabnzbd.ini /defaults/
+COPY --from=base /mp4 /
