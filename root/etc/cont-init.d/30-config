@@ -3,9 +3,6 @@
 [[ ! -e /config/sabnzbd.ini ]] && \
   cp /defaults/sabnzbd.ini /config/sabnzbd.ini
 
-[[ ! -e /config/mp4.conf ]] && \
-  cp /mp4/default.conf /config/mp4.conf
-
 [[ -f /config/sabnzbd.ini ]] && \
   source <(cat /config/sabnzbd.ini | grep script_dir | sed 's/\ = \ /=/g') &>/dev/null
 
@@ -15,11 +12,6 @@
 [[ ! -e "${script_dir}" ]] && \
   mkdir -p "${script_dir}"
 
-FILE="${script_dir}/mp4.sh"
-[[ ! -L "${FILE}" ]] && \
-  ln -s /mp4/mp4.sh "${FILE}"
-
-chown abc:abc -R \
-  /mp4 \
-  /config \
-  "${script_dir}"
+cp -R /mp4 "${script_dir}"
+chown abc:abc -R "${script_dir}"
+chmod +x "${script_dir}/mp4/mp4.sh"
