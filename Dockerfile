@@ -1,5 +1,5 @@
-FROM digiex/mp4:testing AS base
-FROM linuxserver/sabnzbd:unstable
+FROM digiex/mp4:latest AS base
+FROM linuxserver/sabnzbd:latest
 MAINTAINER xzKinGzxBuRnzx
 
 ARG DEBIAN_FRONTEND=noninteractive
