@@ -2,6 +2,7 @@ FROM digiex/mp4:testing AS base
 FROM linuxserver/sabnzbd:unstable
 MAINTAINER xzKinGzxBuRnzx
 
+ENV NVIDIA_DRIVER_CAPABILITIES="compute,video,utility"
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN \
