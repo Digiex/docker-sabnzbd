@@ -2,12 +2,12 @@ FROM digiex/mp4:latest AS base
 FROM linuxserver/sabnzbd:latest
 MAINTAINER xzKinGzxBuRnzx
 
+ENV NVIDIA_DRIVER_CAPABILITIES="compute,video,utility"
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN \
-  mkdir -p /mp4 && \
   apt-get update && \
-  apt-get -y install ffmpeg jq bc mediainfo && \
+  apt-get -y install ffmpeg jq && \
   apt-get clean && \
   rm -rf \
     /tmp/* \
@@ -16,4 +16,4 @@ RUN \
 
 COPY root /
 COPY sabnzbd.ini /defaults/
-COPY --from=base /mp4/* /mp4/
+COPY --from=base /mp4.sh /

@@ -9,9 +9,8 @@
 [[ -z "${script_dir}" ]] && \
   script_dir=/config/scripts
 
-[[ ! -e "${script_dir}" ]] && \
-  mkdir -p "${script_dir}"
+mkdir -p "${script_dir}"
 
-cp -R /mp4 "${script_dir}"
+cp /mp4.sh "${script_dir}/"
 chown abc:abc -R "${script_dir}"
-chmod +x "${script_dir}/mp4/mp4.sh"
+chmod +x "${script_dir}/mp4.sh"
