@@ -1,5 +1,5 @@
-FROM digiex/mp4:latest AS base
-FROM linuxserver/sabnzbd:latest
+FROM ghcr.io/digiex/mp4:latest AS base
+FROM ghcr.io/linuxserver/sabnzbd:latest
 MAINTAINER xzKinGzxBuRnzx
 
 ENV NVIDIA_DRIVER_CAPABILITIES="compute,video,utility"
